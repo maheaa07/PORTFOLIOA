@@ -119,13 +119,13 @@
   --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground font-sans;
-  }
+  } */
 
   /* GitHub-inspired animations */
   .github-card-hover {
@@ -174,4 +174,4 @@
   .github-glow {
     box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
   }
-}
+
