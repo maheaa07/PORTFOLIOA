@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Amisha Singh - Full Stack Developer & Speaker",
   description: "Portfolio of Amisha Singh, a passionate full-stack developer and speaker from Varanasi, India.",
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`dark ${inter.variable} ${playfair.variable} antialiased`}>
-      <body className="bg-github-canvas-default text-github-fg-default min-h-screen">{children}</body>
+      <body className="bg-background text-foreground min-h-screen">{children}</body>
     </html>
   )
 }

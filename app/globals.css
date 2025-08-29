@@ -2,27 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional animation plugin */
-@import "tw-animate-css";
-
 /* Theme variables */
 :root {
   --background: #0d1117;
-  --foreground: #f0f6fc;
+  --foreground: #1d2630;
   --card: #161b22;
-  --card-foreground: #f0f6fc;
+  --card-foreground: #2b3742;
   --popover: #21262d;
-  --popover-foreground: #f0f6fc;
+  --popover-foreground: #21282e;
   --primary: #238636;
-  --primary-foreground: #ffffff;
+  --primary-foreground: #1b1010;
   --secondary: #30363d;
-  --secondary-foreground: #f0f6fc;
+  --secondary-foreground: #1e2328;
   --muted: #21262d;
-  --muted-foreground: #8b949e;
+  --muted-foreground: #293039;
   --accent: #58a6ff;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #1f1616;
   --destructive: #f85149;
-  --destructive-foreground: #ffffff;
+  --destructive-foreground: #311e1e;
   --border: #30363d;
   --input: #21262d;
   --ring: #58a6ff;
@@ -30,73 +27,78 @@
 
 .dark {
   --background: #0d1117;
-  --foreground: #f0f6fc;
+  --foreground: #10151b;
   --card: #161b22;
-  --card-foreground: #f0f6fc;
+  --card-foreground: #1b2937;
   --popover: #21262d;
-  --popover-foreground: #f0f6fc;
+  --popover-foreground: #111b26;
   --primary: #238636;
-  --primary-foreground: #ffffff;
+  --primary-foreground: #000000;
   --secondary: #30363d;
-  --secondary-foreground: #f0f6fc;
+  --secondary-foreground: #2e455c;
   --muted: #21262d;
   --muted-foreground: #8b949e;
   --accent: #58a6ff;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #000000;
   --destructive: #f85149;
-  --destructive-foreground: #ffffff;
+  --destructive-foreground: #271f1f;
   --border: #30363d;
   --input: #21262d;
   --ring: #58a6ff;
 }
 
-/* Plain CSS resets + theme usage (no @layer) */
-* {
-  border-color: var(--border);
-  outline-color: var(--ring);
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring));
+  }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+@layer components {
+  /* GitHub-inspired animations */
+  .github-card-hover {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .github-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(88, 166, 255, 0.12);
+  }
+
+  .github-button {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .github-button:hover {
+    transform: scale(1.05);
+  }
+
+  .github-glow {
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+  }
 }
 
-/* GitHub-inspired animations */
-.github-card-hover {
-  transition: all 0.2s ease-in-out;
-}
+@layer utilities {
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid #58a6ff;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
 
-.github-card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.12);
-}
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
 
-.github-button {
-  transition: all 0.2s ease-in-out;
-}
-
-.github-button:hover {
-  transform: scale(1.05);
-}
-
-.typewriter {
-  overflow: hidden;
-  border-right: 2px solid #58a6ff;
-  white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #58a6ff; }
-}
-
-.github-glow {
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #58a6ff; }
+  }
 }

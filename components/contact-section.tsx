@@ -33,20 +33,20 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "amisha.singh@example.com",
-      href: "mailto:amisha.singh@example.com",
+      value: "amishasingh1623@gmail.com",
+      href: "mailto:amishasingh1623@gmail.com",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Varanasi, India",
+      value: "Bangalore, India",
       href: "#",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 XXXXX XXXXX",
-      href: "tel:+91XXXXXXXXX",
+      value: "+91 7388977687",
+      href: "tel:+917388977687",
     },
   ]
 
