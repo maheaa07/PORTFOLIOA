@@ -21,7 +21,7 @@ export default function AboutSection() {
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     Hi Everyone, I am <span className="text-primary font-semibold">Amisha Singh</span>, a passionate
-                    Frontend Developer who recently completed my B.Tech in Electronics and Communication Engineering
+                    Fullstack Developer who recently completed my B.Tech in Electronics and Communication Engineering
                     from <span className="text-primary font-semibold">KIET Group of Institutions</span> with 70% marks.
                   </p>
 
